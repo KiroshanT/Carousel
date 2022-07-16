@@ -48,8 +48,7 @@ class CarouselCollectionViewCell: UICollectionViewCell {
     var parent: UIViewController?
     var data: Carousel? = nil {
         didSet {
-            print(data?.image_regular)
-            imageView.kf.setImage(with: URL(string: data?.image_regular.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""), options: [.forceRefresh])
+            imageView.kf.setImage(with: URL(string: data?.image_regular.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""))
             imageView.contentMode = .scaleToFill
             title.text = data?.title
             desc.text = data?.description
